@@ -15,12 +15,14 @@ try:
             if event.type == pygame.QUIT:
                 pygame.quit()
         
+        mouse_position = pygame.mouse.get_pos
+        
         for i in range(0, 59):
             j = 0
             for j in range(0, 59):
                 color = (random.randint(0,200), random.randint(0,200), random.randint(0,200))
-                pygame.draw.rect(screen, color, (10*(j)+5,10*(i)+5,10,10), 2)
-    
+                pygame.draw.rect(screen, color, (10*(j)+5+(random.randint(-2,2)),10*(i)+5+(random.randint(-2,2)),10,10), 2)
+        
         pygame.display.flip()
         clock.tick(30) # framerate
 except:
