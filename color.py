@@ -14,9 +14,7 @@ try:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-        
-        mouse_position = pygame.mouse.get_pos
-        
+          
         for i in range(0, 59):
             j = 0
             for j in range(0, 59):
